@@ -1,0 +1,10 @@
+
+
+
+
+
+
+Date	  Name        Age  Swim   Tran1  Bike     Tran2  Run    Time     
+----      ----        ---  ----   -----  ----     -----  ---    ----
+May 2015  Eric Pogue  49   12:44  5:14   1:00:24  3:48   41:41  2:03:51 
+May 2014  Eric Pogue  48   13:55  2:21   1:21:51  3:16   57:53  2:39:13 May 2013  Eric Pogue  47                                        2:48:00
