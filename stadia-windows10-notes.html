@@ -14,7 +14,7 @@
 <body>
 <font size="5" face="verdana" color="black"><b>Stadia Windows 10 Setup</b></br></br>
 Steps:</br>
-1 - Install Windows 10 Professional with default options... link with user Microsoft ID "epogue@epogue.com"</br></br>
+1 - Install Windows 10 Pro with default options... link with Microsoft ID "epogue@epogue.com"</br></br>
 2 - Set up local machine options... keyboard, mouse, monitor, etc</br></br>
 3 - Set up PowerShell to run scripts by setting execution policy to "RemoteSigned" by running PowerShell in Administrator mode... <a href="https://technet.microsoft.com/en-us/library/ee176961.aspx?f=255&MSPPError=-2147217396" target="_blank">Using the Set-ExecutionPolicy Cmdlet</a><br></br>
 4 - Set up Git to run in PowerShell... <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a><br></br>
@@ -23,15 +23,37 @@ Select the following Git for Windows installation options:</br>
 - "Checkout as-is, commit as-is"</br>
 - "Use Windows default console window"</br>
 - Select default options otherwise</br></br>
-5 - Create "Development" folder in the root of the default hard drive</br></br>
-6 - Create "Development\Source" folder</br></br>
-7 - Move to "Development\Source"</br></br> 
-8 - Execute "git clone https://github.com/EricJPogue/EJP.git" from PowerShell</br></br> 
-9 - Execute "https://github.com/EricJPogue/www-epogue-info.git" from PowerShell</br></br> 
-10 - Install Microsoft Code text editor for Windows... <a href="https://code.visualstudio.com/" target="_blank">Code for Windows</a><br></br>
-11 - Upate "Last Utilized:" field below, check file into GitHub, and verify that it is updated... <a href="http://www-epogue-info.azurewebsites.net/stadia-windows10-notes.html">here</a><br></br>
+5 - Set Git username and email</br>
+<Code>
+Git config --global user.name "EricJPogue"</br>
+Git config --global user.email "epogue@epogue.com"</br>
+</Code></br>
+6 - Verify Git username and email</br>
+<Code>
+Git config --global user.name</br>
+Git config --global user.email</br>
+Git config --list</br>
+</Code></br>
+
+5 - Copy the following PowerShell script, past it into your PowerShell session, and execute it to create the desired development directory structure</br>
+<Code>
+Set-Location C:\</br>
+New-Item -ItemType Directory ".\Source"</br>
+</Code></br>
+6 - Execute the following script to clone the EJP project</br>
+<Code>
+Set-Location C:\Source</br>
+git clone https://github.com/EricJPogue/EJP.git</br>
+</Code></br> 
+7 - Execute the following script to clone the www-epogue-info project</br>
+<Code>
+Set-Location C:\Source</br>
+git clone https://github.com/EricJPogue/www-epogue-info.git</br> 
+</Code></br> 
+8 - Install Microsoft Code text editor for Windows... <a href="https://code.visualstudio.com/" target="_blank">Code for Windows</a><br></br>
+9 - Upate "Last Utilized:" field below, check file into GitHub, and verify that it is updated... <a href="http://www-epogue-info.azurewebsites.net/stadia-windows10-notes.html">here</a><br></br>
 <br></br>
-Last Utilized: September 30, 2015 at 11:57 AM CST
+Last Utilized: September 30, 2015 at 01:12 PM CST
 </font>
 </body>
 </html>
