@@ -7,12 +7,12 @@
     a {
         font-family: verdana;
         color: green;
-        font-size: 22px;
+        font-size: 18px;
       }
     </style>
 </head>
 <body>
-<font size="5" face="verdana" color="black"><b>Stadia Windows 10 Setup</b></br></br>
+<font size="4" face="verdana" color="black"><b>Stadia Windows 10 Setup</b></br></br>
 Steps:</br>
 1 - Install Windows 10 Pro with default options... link with Microsoft ID "epogue@epogue.com"</br></br>
 2 - Set up local machine options... keyboard, mouse, monitor, etc</br></br>
@@ -23,35 +23,36 @@ Select the following Git for Windows installation options:</br>
 - "Checkout as-is, commit as-is"</br>
 - "Use Windows default console window"</br>
 - Select default options otherwise</br></br>
-5 - Set Git username and email</br>
-<Code>
-Git config --global user.name "EricJPogue"</br>
-Git config --global user.email "epogue@epogue.com"</br>
-</Code></br>
-6 - Verify Git username and email</br>
-<Code>
-Git config --global user.name</br>
-Git config --global user.email</br>
-Git config --list</br>
-</Code></br>
-
 5 - Copy the following PowerShell script, past it into your PowerShell session, and execute it to create the desired development directory structure</br>
 <Code>
 Set-Location C:\</br>
 New-Item -ItemType Directory ".\Source"</br>
 </Code></br>
-6 - Execute the following script to clone the EJP project</br>
+6 - Clone EJP project</br>
 <Code>
 Set-Location C:\Source</br>
 git clone https://github.com/EricJPogue/EJP.git</br>
 </Code></br> 
-7 - Execute the following script to clone the www-epogue-info project</br>
+7 - Clone www-epogue-info project</br>
 <Code>
 Set-Location C:\Source</br>
 git clone https://github.com/EricJPogue/www-epogue-info.git</br> 
 </Code></br> 
-8 - Install Microsoft Code text editor for Windows... <a href="https://code.visualstudio.com/" target="_blank">Code for Windows</a><br></br>
-9 - Upate "Last Utilized:" field below, check file into GitHub, and verify that it is updated... <a href="http://www-epogue-info.azurewebsites.net/stadia-windows10-notes.html">here</a><br></br>
+8 - Set Git username, email, editor, and matching for commits</br>
+<Code>
+Git config --global user.name "EricJPogue"</br>
+Git config --global user.email "epogue@epogue.com"</br>
+Git config --global push.default simple</br>
+</Code></br>
+9 - Verify Git username and email</br>
+<Code>
+Git config --global user.name</br>
+Git config --global user.email</br>
+Git config --list</br>
+</Code></br>
+10 - Install Microsoft Code text editor for Windows... <a href="https://code.visualstudio.com/" target="_blank">Code for Windows</a><br></br>
+11 - Upate "Last Utilized:" field below using Code text editor, check file into GitHub, and verify that it is updated... <a href="http://www-epogue-info.azurewebsites.net/stadia-windows10-notes.html">here</a><br></br>
+
 <br></br>
 Last Utilized: September 30, 2015 at 01:12 PM CST
 </font>
