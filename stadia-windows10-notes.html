@@ -16,7 +16,11 @@
 Steps:</br>
 1 - Install Windows 10 Pro with default options... link with Microsoft ID "epogue@epogue.com"</br></br>
 2 - Set up local machine options... keyboard, mouse, monitor, etc</br></br>
-3 - Set up PowerShell to run scripts by setting execution policy to "RemoteSigned" by running PowerShell in Administrator mode... <a href="https://technet.microsoft.com/en-us/library/ee176961.aspx?f=255&MSPPError=-2147217396" target="_blank">Using the Set-ExecutionPolicy Cmdlet</a><br></br>
+3 - Set up PowerShell to run scripts by setting execution policy to "RemoteSigned" by running PowerShell in Administrator mode and running the 
+following commend... See <a href="https://technet.microsoft.com/en-us/library/ee176961.aspx?f=255&MSPPError=-2147217396" target="_blank">Using Set-ExecutionPolicy</a> for more information.</br>
+<Code>
+Set-ExecutionPolicy RemoteSigned
+</Code></br></br>
 4 - Set up Git to run in PowerShell... <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a><br></br>
 Select the following Git for Windows installation options:</br>
 - "Use Git from the Widows Command Promt"</br>
