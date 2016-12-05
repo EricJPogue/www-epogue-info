@@ -17,7 +17,9 @@ Steps:</br>
 1 - Install Windows 10 Pro with default options... link with Microsoft ID "epogue@epogue.com".</br></br>
 2 - Set up local machine options... keyboard, mouse, monitor, etc. On Mac Pro disable "AMD CrossFireX" from "AMD 
 FirePro Control Center" under "Performance" section or "Shutdown" will not work in Bootcamp.</br></br>
-3 - Set up PowerShell to run scripts by setting execution policy to "RemoteSigned" by running PowerShell in 
+3a - Install Visual Studio 15 Professional from <a href="my.visualstudio.com" target="_blank">
+Visual Studio site</a> be sure to select C++ and Git options under the custom install options. This step (3c) should be done instead of steps 3b and 3c below.
+3b* - Set up PowerShell to run scripts by setting execution policy to "RemoteSigned" by running PowerShell in 
 Administrator mode and running the following commend... 
 See <a href="https://technet.microsoft.com/en-us/library/ee176961.aspx?f=255&MSPPError=-2147217396" target="_blank">
 Using Set-ExecutionPolicy</a> for more information.</br>
@@ -26,60 +28,60 @@ Set-ExecutionPolicy RemoteSigned
 </Code></br></br>
 Restart PowerShell session to have new ExecutionPolicy take effect.
 </br></br>
-4 - Set up Git to run in PowerShell... 
+3c* - Set up Git to run in PowerShell... 
 <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a>.<br></br>
 Select the following Git for Windows installation options:</br>
 - "Use Git from the Widows Command Promt"</br>
 - "Checkout as-is, commit as-is"</br>
 - "Use Windows default console window"</br>
 - Select default options otherwise</br></br>
-5 - Copy the following PowerShell script, past it into your PowerShell session, and execute it to create the desired development directory structure</br>
+4 - Copy the following PowerShell script, past it into your PowerShell session, and execute it to create the desired development directory structure</br>
 <Code>
 Set-Location C:\</br>
 New-Item -ItemType Directory ".\Source"</br>
 </Code></br>
-6 - Clone EJP project</br>
+5 - Clone EJP project</br>
 <Code>
 Set-Location C:\Source</br>
 git clone https://github.com/EricJPogue/EJP.git</br>
 </Code></br> 
-7 - Clone www-epogue-info project</br>
+6 - Clone www-epogue-info project</br>
 <Code>
 Set-Location C:\Source</br>
 git clone https://github.com/EricJPogue/www-epogue-info.git</br> 
 </Code></br> 
-8 - Set Git username, email, editor, and matching for commits</br>
+7 - Set Git username, email, editor, and matching for commits</br>
 <Code>
 Git config --global user.name "EricJPogue"</br>
 Git config --global user.email "epogue@epogue.com"</br>
 Git config --global push.default simple</br>
 </Code></br>
-9 - Verify Git username and email</br>
+8 - Verify Git username and email</br>
 <Code>
 Git config --global user.name</br>
 Git config --global user.email</br>
 Git config --list</br>
 </Code></br>
-10 - Install Microsoft Code text editor for Windows... <a href="https://code.visualstudio.com/" target="_blank">Code for Windows</a><br></br>
-11 - Upate "Last Utilized:" field below using Code text editor, check file into GitHub, and verify that it is updated... <a href="http://www-epogue-info.azurewebsites.net/stadia-windows10-notes.html">here</a><br></br>
-12 - Set up PowerShell profile and scripts. Be sure to test the "Go" alias.</br>
+9 - Install Microsoft Code text editor for Windows... <a href="https://code.visualstudio.com/" target="_blank">Code for Windows</a><br></br>
+10 - Upate "Last Utilized:" field below using Code text editor, check file into GitHub, and verify that it is updated... <a href="http://www-epogue-info.azurewebsites.net/stadia-windows10-notes.html">here</a><br></br>
+11 - Set up PowerShell profile and scripts. Be sure to test the "Go" alias.</br>
 <Code>
 Set-Location C:\Source\EJP\scripts</br>
 .\Update-PSProfile.ps1</br>
 </Code></br>
-13 - Install Chrome and sign into "ericjamespoguegg@gmail.com" account with "xxyyzzzxx" password.</br>
+12 - Install Chrome and sign into "ericjamespoguegg@gmail.com" account with "xxyyzzzxx" password.</br>
 <Code>
 Go</br>
 .\Install-Chrome</br>
 </Code></br>
-14 - Test "I" command.</br></br> 
-15 - Install Visual Studio 2012 Professional from MSDN</br>
+13 - Test "I" command.</br></br> 
+14 - Install Visual Studio 2012 Professional from MSDN</br>
 <Code>
 Go</br>
 .\Install-VS2012</br>
 </Code></br>
-14 - Install Revit 2015</br>
-15 - Clone Stadia AddIn</br>
+15 - Install Revit 2015</br>
+16 - Clone Stadia AddIn</br>
 <br></br>
 Last Utilized: 05 Dec 16 at 9:45 AM CST
 </font>
