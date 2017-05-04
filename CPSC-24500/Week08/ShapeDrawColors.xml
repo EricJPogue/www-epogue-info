@@ -2,18 +2,18 @@
 <shapecolorslist>
   <shapecolor>
     <type>rectangle</type>
-    <color>blue</colorx>
+    <color>blue</color>
   </shapecolor>
     <shapecolor>
     <type>oval</type>
-    <color>green</colorx>
+    <color>green</color>
   </shapecolor>
   <shapecolor>
     <type>circle</type>
-    <color>red</colorx>
+    <color>red</color>
   </shapecolor>
   <shapecolor>
     <type>square</type>
-    <color>black</colorx>
+    <color>black</color>
   </shapecolor>
 </shapecolorslist>
