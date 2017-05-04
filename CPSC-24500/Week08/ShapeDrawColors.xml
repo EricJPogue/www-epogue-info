@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<shapecolorslist>
+  <shapecolor>
+    <type>rectangle</type>
+    <color>blue</colorx>
+  </shapecolor>
+    <shapecolor>
+    <type>oval</type>
+    <color>green</colorx>
+  </shapecolor>
+  <shapecolor>
+    <type>circle</type>
+    <color>red</colorx>
+  </shapecolor>
+  <shapecolor>
+    <type>square</type>
+    <color>black</colorx>
+  </shapecolor>
+</shapecolorslist>
