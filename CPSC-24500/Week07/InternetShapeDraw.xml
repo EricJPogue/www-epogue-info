@@ -30,6 +30,19 @@
   <shape>
   </shape>
     <type>rectangle</type>
+    <x>400</x>
+    <y>200</y>
+    <width>40</width>
+    <height>40</height>
+  </shape>
+  <shape>
+    <type>oval</type>
+    <x>400</x>
+    <y>200</y>
+    <width>40</width>
+    <height>40</height>
+  </shape>
+    <type>rectangle</type>
     <x>565</x>
     <y>254</y>
     <width>30</width>
