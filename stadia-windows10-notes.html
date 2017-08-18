@@ -17,7 +17,7 @@ Steps:</br>
 1 - Install Windows 10 Pro with default options... link with Microsoft ID "epogue@epogue.com".</br></br>
 2 - Set up local machine options... keyboard, mouse, monitor, etc. On Mac Pro disable "AMD CrossFireX" from "AMD 
 FirePro Control Center" under "Performance" section or "Shutdown" will not work in Bootcamp.</br></br>
-3a - Install Visual Studio 15 Professional from <a href="http://my.visualstudio.com" target="_blank">
+3a - Install Visual Studio 17 Professional from <a href="http://my.visualstudio.com" target="_blank">
 Visual Studio site</a> be sure to select C++ and Git options under the custom install options. This step (3c) should be done instead of step 3b below.</br></br>
 3b* - Alternative to 3a (don't do both) Set up Git to run in PowerShell... 
 <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a>.<br></br>
@@ -64,10 +64,17 @@ Git config --list</br>
 </Code></br>
 10 - Install Microsoft Code text editor for Windows... <a href="https://code.visualstudio.com/" target="_blank">Code for Windows</a><br></br>
 11 - Upate "Last Utilized:" field below using Code text editor, check file into GitHub, and verify that it is updated... <a href="http://www-epogue-info.azurewebsites.net/stadia-windows10-notes.html">here</a><br></br>
-12 - Set up PowerShell profile and scripts. Be sure to test the "Go" alias.</br>
+12 - Install personal PowerShell scripts and PowerShell profile
+<Code>
+$DocumentsPath=$env:homepath + '\Documents'
+set-location $DocumentsPath
+git clone https://github.com/EricJPogue/Scripts.git
+.\Scripts\Update-PSProfile.ps1
+</Code>
+13 - Set up PowerShell profile and scripts. Be sure to test the "Go" alias.</br>
 <Code>
 Set-Location C:\Source\EJP\scripts</br>
-.\Update-PSProfile.ps1</br>
+.\Scripts\Update-PSProfile.ps1</br>
 </Code></br>
 13 - Install Chrome and sign into "ericjamespoguegg@gmail.com" account with "xxyyzzzxx" password.</br>
 <Code>
@@ -80,7 +87,7 @@ Go</br>
 16 - Install Revit 2017</br>
 17 - Clone Stadia AddIn</br>
 <br></br>
-Last Utilized: 14 Feb 17 3:08 PM CST
+Last Utilized: 14 Aug 17 8:42 AM CST
 </font>
 </body>
 </html>
