@@ -1,0 +1,5 @@
+C:\vStudio\customValid\customValid\obj\Debug\ResolveAssemblyReference.cache
+C:\vStudio\customValid\customValid\bin\customValid.dll
+C:\vStudio\customValid\customValid\bin\customValid.pdb
+C:\vStudio\customValid\customValid\obj\Debug\customValid.dll
+C:\vStudio\customValid\customValid\obj\Debug\customValid.pdb
