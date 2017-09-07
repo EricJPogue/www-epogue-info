@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random</title>
+    <style type="text/css">
+        input { text-align:right; }
+    </style>
+</head>
+<body onload="random()">
+
+<button type="button" autofocus onclick="random()">Generate Random Numbers</button><br>
+
+<table>
+    <tr>
+        <th>Range</th>
+        <th>Values</th> 
+    </tr>
+    <tr>
+        <td>1-100:</td>
+        <td> 
+            <input id="r100-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r100-2" type="text" value="" size="5" disabled>
+            <input id="r100-3" type="text" value="" size="5" disabled>
+            <input id="r100-4" type="text" value="" size="5" disabled>
+            <input id="r100-5" type="text" value="" size="5" disabled>
+            <input id="r100-6" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>1-20:</td>
+        <td>
+            <input id="r20-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r20-2" type="text" value="" size="5" disabled>
+            <input id="r20-3" type="text" value="" size="5" disabled>
+            <input id="r20-4" type="text" value="" size="5" disabled>
+            <input id="r20-5" type="text" value="" size="5" disabled>
+            <input id="r20-6" type="text" value="" size="5" disabled>
+            </td>
+        </tr>
+    <tr>
+        <td>1-12:</td>
+        <td>
+            <input id="r12-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r12-2" type="text" value="" size="5" disabled>
+            <input id="r12-3" type="text" value="" size="5" disabled>
+            <input id="r12-4" type="text" value="" size="5" disabled>
+            <input id="r12-5" type="text" value="" size="5" disabled>
+            <input id="r12-6" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>1-10:</td>
+        <td>
+            <input id="r10-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r10-2" type="text" value="" size="5" disabled>
+            <input id="r10-3" type="text" value="" size="5" disabled>
+            <input id="r10-4" type="text" value="" size="5" disabled>
+            <input id="r10-5" type="text" value="" size="5" disabled>
+            <input id="r10-6" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>1-8:</td>
+        <td>
+            <input id="r8-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r8-2" type="text" value="" size="5" disabled>
+            <input id="r8-3" type="text" value="" size="5" disabled>
+            <input id="r8-4" type="text" value="" size="5" disabled>
+            <input id="r8-5" type="text" value="" size="5" disabled>
+            <input id="r8-6" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>1-6:</td>
+        <td>
+            <input id="r6-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r6-2" type="text" value="" size="5" disabled>
+            <input id="r6-3" type="text" value="" size="5" disabled>
+            <input id="r6-4" type="text" value="" size="5" disabled>
+            <input id="r6-5" type="text" value="" size="5" disabled>
+            <input id="r6-6" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>1-4:</td>
+        <td>
+            <input id="r4-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r4-2" type="text" value="" size="5" disabled>
+            <input id="r4-3" type="text" value="" size="5" disabled>
+            <input id="r4-4" type="text" value="" size="5" disabled>
+            <input id="r4-5" type="text" value="" size="5" disabled>
+            <input id="r4-6" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>1-2:</td>
+        <td>
+            <input id="r2-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="r2-2" type="text" value="" size="5" disabled>
+            <input id="r2-3" type="text" value="" size="5" disabled>
+            <input id="r2-4" type="text" value="" size="5" disabled>
+            <input id="r2-5" type="text" value="" size="5" disabled>
+            <input id="r2-6" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+</table>
+<script>
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function random() {
+    document.getElementById("r100-1").value = getRandomInteger(1, 100);   
+    document.getElementById("r100-2").value = getRandomInteger(1, 100);
+    document.getElementById("r100-3").value = getRandomInteger(1, 100);   
+    document.getElementById("r100-4").value = getRandomInteger(1, 100);
+    document.getElementById("r100-5").value = getRandomInteger(1, 100);   
+    document.getElementById("r100-6").value = getRandomInteger(1, 100);
+
+    document.getElementById("r20-1").value = getRandomInteger(1, 20);
+    document.getElementById("r20-2").value = getRandomInteger(1, 20);
+    document.getElementById("r20-3").value = getRandomInteger(1, 20);
+    document.getElementById("r20-4").value = getRandomInteger(1, 20);
+    document.getElementById("r20-5").value = getRandomInteger(1, 20);
+    document.getElementById("r20-6").value = getRandomInteger(1, 20);
+
+    document.getElementById("r12-1").value = getRandomInteger(1, 12);
+    document.getElementById("r12-2").value = getRandomInteger(1, 12);
+    document.getElementById("r12-3").value = getRandomInteger(1, 12);
+    document.getElementById("r12-4").value = getRandomInteger(1, 12);
+    document.getElementById("r12-5").value = getRandomInteger(1, 12);
+    document.getElementById("r12-6").value = getRandomInteger(1, 12);
+
+    document.getElementById("r10-1").value = getRandomInteger(1, 10);
+    document.getElementById("r10-2").value = getRandomInteger(1, 10);
+    document.getElementById("r10-3").value = getRandomInteger(1, 10);
+    document.getElementById("r10-4").value = getRandomInteger(1, 10);
+    document.getElementById("r10-5").value = getRandomInteger(1, 10);
+    document.getElementById("r10-6").value = getRandomInteger(1, 10);
+
+    document.getElementById("r8-1").value = getRandomInteger(1, 8);
+    document.getElementById("r8-2").value = getRandomInteger(1, 8);
+    document.getElementById("r8-3").value = getRandomInteger(1, 8);
+    document.getElementById("r8-4").value = getRandomInteger(1, 8);
+    document.getElementById("r8-5").value = getRandomInteger(1, 8);
+    document.getElementById("r8-6").value = getRandomInteger(1, 8);
+
+    document.getElementById("r6-1").value = getRandomInteger(1, 6);
+    document.getElementById("r6-2").value = getRandomInteger(1, 6);
+    document.getElementById("r6-3").value = getRandomInteger(1, 6);
+    document.getElementById("r6-4").value = getRandomInteger(1, 6);
+    document.getElementById("r6-5").value = getRandomInteger(1, 6);
+    document.getElementById("r6-6").value = getRandomInteger(1, 6);
+
+    document.getElementById("r4-1").value = getRandomInteger(1, 4);
+    document.getElementById("r4-2").value = getRandomInteger(1, 4);
+    document.getElementById("r4-3").value = getRandomInteger(1, 4);
+    document.getElementById("r4-4").value = getRandomInteger(1, 4);
+    document.getElementById("r4-5").value = getRandomInteger(1, 4);
+    document.getElementById("r4-6").value = getRandomInteger(1, 4);
+
+    document.getElementById("r2-1").value = getRandomInteger(1, 2);
+    document.getElementById("r2-2").value = getRandomInteger(1, 2);
+    document.getElementById("r2-3").value = getRandomInteger(1, 2);
+    document.getElementById("r2-4").value = getRandomInteger(1, 2);
+    document.getElementById("r2-5").value = getRandomInteger(1, 2);
+    document.getElementById("r2-6").value = getRandomInteger(1, 2);
+}
+</script>
+
+</body>
+</html>

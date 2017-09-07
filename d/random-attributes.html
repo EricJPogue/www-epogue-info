@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Attributes</title>
+    <style type="text/css">
+        input { text-align:right; }
+    </style>
+</head>
+<body onload="randomAttributes()">
+
+<button type="button" autofocus onclick="randomAttributes()">Generate Random Numbers</button><br>
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Values</th> 
+    </tr>
+    <tr>
+        <td>s:</td>
+        <td> 
+            <input id="s-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="s-2" type="text" value="" size="5" disabled>
+            <input id="s-3" type="text" value="" size="5" disabled>
+            <input id="s-4" type="text" value="" size="5" disabled>
+            <input id="s-5" type="text" value="" size="5" disabled>
+            <input id="s-6" type="text" value="" size="5" disabled>
+            <input id="s-7" type="text" value="" size="5" disabled>
+            <input id="s-8" type="text" value="" size="5" disabled>
+            <input id="s-9" type="text" value="" size="5" disabled>
+            <input id="s-10" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>d:</td>
+        <td>
+            <input id="d-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="d-2" type="text" value="" size="5" disabled>
+            <input id="d-3" type="text" value="" size="5" disabled>
+            <input id="d-4" type="text" value="" size="5" disabled>
+            <input id="d-5" type="text" value="" size="5" disabled>
+            <input id="d-6" type="text" value="" size="5" disabled>
+            <input id="d-7" type="text" value="" size="5" disabled>
+            <input id="d-8" type="text" value="" size="5" disabled>
+            <input id="d-9" type="text" value="" size="5" disabled>
+            <input id="d-10" type="text" value="" size="5" disabled>
+        </td>
+        </tr>
+    <tr>
+        <td>c:</td>
+        <td>
+            <input id="c-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="c-2" type="text" value="" size="5" disabled>
+            <input id="c-3" type="text" value="" size="5" disabled>
+            <input id="c-4" type="text" value="" size="5" disabled>
+            <input id="c-5" type="text" value="" size="5" disabled>
+            <input id="c-6" type="text" value="" size="5" disabled>
+            <input id="c-7" type="text" value="" size="5" disabled>
+            <input id="c-8" type="text" value="" size="5" disabled>
+            <input id="c-9" type="text" value="" size="5" disabled>
+            <input id="c-10" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>i:</td>
+        <td>
+            <input id="i-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="i-2" type="text" value="" size="5" disabled>
+            <input id="i-3" type="text" value="" size="5" disabled>
+            <input id="i-4" type="text" value="" size="5" disabled>
+            <input id="i-5" type="text" value="" size="5" disabled>
+            <input id="i-6" type="text" value="" size="5" disabled>
+            <input id="i-7" type="text" value="" size="5" disabled>
+            <input id="i-8" type="text" value="" size="5" disabled>
+            <input id="i-9" type="text" value="" size="5" disabled>
+            <input id="i-10" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>w:</td>
+        <td>
+            <input id="w-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="w-2" type="text" value="" size="5" disabled>
+            <input id="w-3" type="text" value="" size="5" disabled>
+            <input id="w-4" type="text" value="" size="5" disabled>
+            <input id="w-5" type="text" value="" size="5" disabled>
+            <input id="w-6" type="text" value="" size="5" disabled>
+            <input id="w-7" type="text" value="" size="5" disabled>
+            <input id="w-8" type="text" value="" size="5" disabled>
+            <input id="w-9" type="text" value="" size="5" disabled>
+            <input id="w-10" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>ch:</td>
+        <td>
+            <input id="ch-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="ch-2" type="text" value="" size="5" disabled>
+            <input id="ch-3" type="text" value="" size="5" disabled>
+            <input id="ch-4" type="text" value="" size="5" disabled>
+            <input id="ch-5" type="text" value="" size="5" disabled>
+            <input id="ch-6" type="text" value="" size="5" disabled>
+            <input id="ch-7" type="text" value="" size="5" disabled>
+            <input id="ch-8" type="text" value="" size="5" disabled>
+            <input id="ch-9" type="text" value="" size="5" disabled>
+            <input id="ch-10" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>sp:</td>
+        <td>
+            <input id="sp-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="sp-2" type="text" value="" size="5" disabled>
+            <input id="sp-3" type="text" value="" size="5" disabled>
+            <input id="sp-4" type="text" value="" size="5" disabled>
+            <input id="sp-5" type="text" value="" size="5" disabled>
+            <input id="sp-6" type="text" value="" size="5" disabled>
+            <input id="sp-7" type="text" value="" size="5" disabled>
+            <input id="sp-8" type="text" value="" size="5" disabled>
+            <input id="sp-9" type="text" value="" size="5" disabled>
+            <input id="sp-10" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Hero Values</th> 
+    </tr>
+    <tr>
+        <td>s:</td>
+        <td> 
+            <input id="hs-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="hs-2" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>d:</td>
+        <td>
+            <input id="hd-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="hd-2" type="text" value="" size="5" disabled>
+            </td>
+        </tr>
+    <tr>
+        <td>c:</td>
+        <td>
+            <input id="hc-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="hc-2" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>i:</td>
+        <td>
+            <input id="hi-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="hi-2" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>w:</td>
+        <td>
+            <input id="hw-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="hw-2" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>ch:</td>
+        <td>
+            <input id="hch-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="hch-2" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>sp:</td>
+        <td>
+            <input id="hsp-1" type="text" value="" size="5" style="font-weight: bold;" disabled>
+            <input id="hsp-2" type="text" value="" size="5" disabled>
+        </td>
+    </tr>
+</table>
+<script>
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function getRandomAttribute() { 
+    return getRandomInteger(1,6)+getRandomInteger(1,6)+getRandomInteger(1,6);
+}
+
+function getRandomHeroAttribute() {
+    // Take the best 3 out of 4 and sum.
+    var r = [0,0,0,0];
+    var smallestValue = 101; 
+    var smallestIndex = 0;
+    for (i=0; i<r.length; i++) {
+        r[i]=getRandomInteger(1,6);
+        if (r[i] < smallestValue) {
+            smallestValue = r[i];
+            smallestIndex = i; 
+        }
+    }
+
+    var sumOfLargestThree = 0;
+    for (i=0; i<r.length; i++) {
+        if (i!=smallestIndex) {
+            sumOfLargestThree = sumOfLargestThree + r[i];
+        }
+    }
+    return sumOfLargestThree;
+}
+
+function randomAttributes() {
+    document.getElementById("s-1").value = getRandomAttribute();   
+    document.getElementById("s-2").value = getRandomAttribute();
+    document.getElementById("s-3").value = getRandomAttribute();   
+    document.getElementById("s-4").value = getRandomAttribute();
+    document.getElementById("s-5").value = getRandomAttribute();   
+    document.getElementById("s-6").value = getRandomAttribute();
+    document.getElementById("s-7").value = getRandomAttribute();
+    document.getElementById("s-8").value = getRandomAttribute();
+    document.getElementById("s-9").value = getRandomAttribute();
+    document.getElementById("s-10").value = getRandomAttribute();
+    
+    document.getElementById("d-1").value = getRandomAttribute();
+    document.getElementById("d-2").value = getRandomAttribute();
+    document.getElementById("d-3").value = getRandomAttribute();
+    document.getElementById("d-4").value = getRandomAttribute();
+    document.getElementById("d-5").value = getRandomAttribute();
+    document.getElementById("d-6").value = getRandomAttribute();
+    document.getElementById("d-7").value = getRandomAttribute();
+    document.getElementById("d-8").value = getRandomAttribute();
+    document.getElementById("d-9").value = getRandomAttribute();
+    document.getElementById("d-10").value = getRandomAttribute();
+    
+    document.getElementById("c-1").value = getRandomAttribute();
+    document.getElementById("c-2").value = getRandomAttribute();
+    document.getElementById("c-3").value = getRandomAttribute();
+    document.getElementById("c-4").value = getRandomAttribute();
+    document.getElementById("c-5").value = getRandomAttribute();
+    document.getElementById("c-6").value = getRandomAttribute();
+    document.getElementById("c-7").value = getRandomAttribute();
+    document.getElementById("c-8").value = getRandomAttribute();
+    document.getElementById("c-9").value = getRandomAttribute();
+    document.getElementById("c-10").value = getRandomAttribute();
+    
+    document.getElementById("i-1").value = getRandomAttribute();
+    document.getElementById("i-2").value = getRandomAttribute();
+    document.getElementById("i-3").value = getRandomAttribute();
+    document.getElementById("i-4").value = getRandomAttribute();
+    document.getElementById("i-5").value = getRandomAttribute();
+    document.getElementById("i-6").value = getRandomAttribute();
+    document.getElementById("i-7").value = getRandomAttribute();
+    document.getElementById("i-8").value = getRandomAttribute();
+    document.getElementById("i-9").value = getRandomAttribute();
+    document.getElementById("i-10").value = getRandomAttribute();
+
+    document.getElementById("w-1").value = getRandomAttribute();
+    document.getElementById("w-2").value = getRandomAttribute();
+    document.getElementById("w-3").value = getRandomAttribute();
+    document.getElementById("w-4").value = getRandomAttribute();
+    document.getElementById("w-5").value = getRandomAttribute();
+    document.getElementById("w-6").value = getRandomAttribute();
+    document.getElementById("w-7").value = getRandomAttribute();
+    document.getElementById("w-8").value = getRandomAttribute();
+    document.getElementById("w-9").value = getRandomAttribute();
+    document.getElementById("w-10").value = getRandomAttribute();
+    
+    document.getElementById("ch-1").value = getRandomAttribute();
+    document.getElementById("ch-2").value = getRandomAttribute();
+    document.getElementById("ch-3").value = getRandomAttribute();
+    document.getElementById("ch-4").value = getRandomAttribute();
+    document.getElementById("ch-5").value = getRandomAttribute();
+    document.getElementById("ch-6").value = getRandomAttribute();
+    document.getElementById("ch-7").value = getRandomAttribute();
+    document.getElementById("ch-8").value = getRandomAttribute();
+    document.getElementById("ch-9").value = getRandomAttribute();
+    document.getElementById("ch-10").value = getRandomAttribute();
+    
+    document.getElementById("sp-1").value = getRandomAttribute();
+    document.getElementById("sp-2").value = getRandomAttribute();
+    document.getElementById("sp-3").value = getRandomAttribute();
+    document.getElementById("sp-4").value = getRandomAttribute();
+    document.getElementById("sp-5").value = getRandomAttribute();
+    document.getElementById("sp-6").value = getRandomAttribute();
+    document.getElementById("sp-7").value = getRandomAttribute();
+    document.getElementById("sp-8").value = getRandomAttribute();
+    document.getElementById("sp-9").value = getRandomAttribute();
+    document.getElementById("sp-10").value = getRandomAttribute();
+
+    document.getElementById("hs-1").value = getRandomHeroAttribute();   
+    document.getElementById("hs-2").value = getRandomHeroAttribute();
+    
+    document.getElementById("hd-1").value = getRandomHeroAttribute();
+    document.getElementById("hd-2").value = getRandomHeroAttribute();
+    
+    document.getElementById("hc-1").value = getRandomHeroAttribute();
+    document.getElementById("hc-2").value = getRandomHeroAttribute();
+    
+    document.getElementById("hi-1").value = getRandomHeroAttribute();
+    document.getElementById("hi-2").value = getRandomHeroAttribute();
+
+    document.getElementById("hw-1").value = getRandomHeroAttribute();
+    document.getElementById("hw-2").value = getRandomHeroAttribute();
+    
+    document.getElementById("hch-1").value = getRandomHeroAttribute();
+    document.getElementById("hch-2").value = getRandomHeroAttribute();
+    
+    document.getElementById("hsp-1").value = getRandomHeroAttribute();
+    document.getElementById("hsp-2").value = getRandomHeroAttribute();
+}
+</script>
+
+</body>
+</html>
