@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite Places</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div element that contains the map. */
+      #myMapID {
+        height: 100%;
+        width: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    </head>
+    <body>
+        <h1>Renata &amp; Eric's &quot;Top Ten&quot; Favorite Places to Visit Game</h1>        
+        Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
+        Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
+
+        <div id="myMapID"></div>
+        <script>
+            // Create an array of our favorite places.
+            var favoritePlaces = [
+                {content:'<strong>#1: Lombard, IL... Home Sweet Home!<strong>', coordinates:{lat:41.837546,lng:-88.0146821}, iconImagePath:"one.png"},
+                {content:'<strong>#2: Quetico!<strong>', coordinates:{lat:48.5,lng:-91.3}, iconImagePath:"two.png"},
+                {content:'Santorini, Greece', coordinates:{lat:36.3932,lng:25.4615}, iconImagePath:"flag.png"},
+                {content:'Florence, Italy', coordinates:{lat:43.7696,lng:11.2558}, iconImagePath:"flag.png"},
+                {content:'Myrtle Beach, SC', coordinates:{lat:33.6891,lng:-78.8867}, iconImagePath:"flag.png"},
+                {content:'Prague, Czechia', coordinates:{lat:50.0755,lng:14.4378}, iconImagePath:"flag.png"},
+                {content:'Nelson, New Zealand', coordinates:{lat:-41.2706,lng:173.2840}, iconImagePath:"flag.png"},
+                {content:'Krakow, Poland', coordinates:{lat:50.0647,lng:19.9450}, iconImagePath:"flag.png"},
+                {content:'Zakopane, Poland', coordinates:{lat:49.2992,lng:19.9496}, iconImagePath:"flag.png"},
+                {content:'Canoe Bay, WI', coordinates:{lat:45.3306,lng:-91.4918}, iconImagePath:"flag.png"}
+            ]; 
+
+            var gMap;
+            var currentPlaceIndex = 9;
+            var currentPlace = favoritePlaces[currentPlaceIndex];
+            var score = 0;
+
+            StartNewSearch();
+            SetScore();
+
+            // initMap is a callback function that is initiated as part of the Google Maps API call at the bottom.
+            function initMap() {
+                // Create a new map and assign it to gMap
+                gMap = new google.maps.Map(document.getElementById('myMapID'), {
+                    center: {lat: 41.878, lng: 10}, zoom: 3});
+
+                // Note that several message boards suggested using 'idle' instead of 'bounds_changed' because 
+                // 'bounds_changed' gets called over and over when the user drags the map.
+                google.maps.event.addListener(gMap, 'idle', function() {
+                    UpdateGame()
+                });
+            }
+
+            function UpdateGame() {
+                var zoomLevel = gMap.getZoom()
+                var inBounds = false;
+                var won = false;
+
+                if (gMap.getBounds().contains(currentPlace.coordinates)) {
+                   inBounds = true;
+                }
+
+                console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
+
+                if (zoomLevel >= 8 && inBounds) {
+                    score++; 
+                    SetScore();
+                    AddMarker(currentPlace);
+
+                    numberToDisply = currentPlaceIndex+1;
+                    alert('Well done! Our #'+numberToDisply+' was '+currentPlace.content+'. Score!!!');
+
+                    if (currentPlaceIndex > 0) {
+                        currentPlaceIndex--;
+                        currentPlace = favoritePlaces[currentPlaceIndex];
+
+                        gMap.setZoom(3);
+                        var center={lat: 41.878, lng: 10};
+                        gMap.setCenter(center);
+
+                        StartNewSearch();
+                    } else {
+                        won = true;
+                    }
+                }
+
+                // Update hint.
+                if (won) {
+                    SetHint('You have WON! You have WON!! You have WON!!!');
+                } else if (zoomLevel<=3  && inBounds) {
+                    SetHint('You can see it from here! Double click on a location that you think is close to our #'+numberToDisply+' favorite place. More hints to follow...');
+                } else if (zoomLevel>3 && inBounds) {
+                    SetHint('Getting Warmer! Keep double clicking on a location that you think is close to our #'+numberToDisply+' favorite place.');
+                } else if (zoomLevel>3 && !inBounds) {
+                    SetHint('You can not see it from here! Zoom out (double right click) or drag the map to a location that you think is close to our #'+numberToDisply+' favorite place.');
+                } 
+            }
+
+            function StartNewSearch() {
+                numberToDisply = currentPlaceIndex+1;
+                SetHint('Double click on a location that you think is close to our #'+numberToDisply+' favorite place. More hints to follow...');
+                console.log(currentPlace);
+            }
+
+            function SetHint(hint) {
+                document.getElementById("hint-id").value = hint;  
+            }
+
+            function SetScore() {
+                document.getElementById("score-id").value = score; 
+            }
+
+            function AddMarker(markerProperties) {
+                var marker = new google.maps.Marker({position:markerProperties.coordinates, map:gMap});
+
+                // Check if there is a custom icon image.
+                if (markerProperties.iconImagePath) {
+                    // Set custum icon image.
+                    marker.setIcon(markerProperties.iconImagePath);
+                }
+
+                // Check if there is content and create a listener if content exists.
+                if (markerProperties.content) {
+                    var infoWindow = new google.maps.InfoWindow({content:markerProperties.content});
+
+                    marker.addListener('click', function() {
+                        infoWindow.open(gMap, marker);
+                    });
+                }
+            }
+        </script>
+
+        // Call the Google Maps API with the initMap callback function as part of the call.
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzBv2wzvSaRv0jO2dLYTi2xKlqctFIuKs&callback=initMap"
+            async defer>
+        </script>
+  </body>
+</html>
+
