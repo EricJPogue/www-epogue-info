@@ -14,7 +14,8 @@
 //            and puts them in the document
 
 function getPlace(zip) {
-  var xhr = new XMLHttpRequest();
+    console.log("function getPlace(zip) { ... }");
+    var xhr = new XMLHttpRequest();
 
 // Register the embedded handler function
   xhr.onreadystatechange = function () {
