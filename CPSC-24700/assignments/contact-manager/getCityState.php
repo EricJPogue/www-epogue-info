@@ -21,7 +21,6 @@
     "60113" => "Creston, IL",
     "60115" => "Dekalb, IL",
     "60116" => "Carol Stream, IL",
-    /*
     "60117" => "Bloomingdale, IL",
     "60118" => "Dundee, IL",
     "60119" => "Elburn, IL",
@@ -46,6 +45,8 @@
     "60140" => "Hampshire, IL",
     "60141" => "Hines, IL",
     "60142" => "Huntley, IL",
+    /*
+
     "60143" => "Itasca, IL",
     "60144" => "Kaneville, IL",
     "60145" => "Kingston, IL",
