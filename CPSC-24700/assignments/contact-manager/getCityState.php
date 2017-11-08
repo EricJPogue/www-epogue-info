@@ -5,6 +5,10 @@
 //  form
       
   $cityState = array("81611" => "Aspen, Colorado",
+    "60101" => "Addison, IL",
+    "60102" => "Algonquin, IL",
+    "60103" => "Bartlett, IL",
+
                      "81411" => "Bedrock, Colorado",
                      "80908" => "Black Forest, Colorado",
                      "80301" => "Boulder, Colorado",
