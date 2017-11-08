@@ -22,7 +22,7 @@
     "60116" => "Carol Stream, IL",
     "60117" => "Bloomingdale, IL",
 
-        /*
+
     "60118" => "Dundee, IL",
     "60119" => "Elburn, IL",
     "60120" => "Elgin, IL",
@@ -34,7 +34,7 @@
     "60128" => "Carol Stream, IL",
     "60129" => "Esmond, IL",
     "60130" => "Forest Park, IL",
-    */
+        /*
     "60131" => "Franklin Park, IL",
     "60132" => "Carol Stream, IL",
     "60133" => "Hanover Park, IL",
@@ -47,7 +47,7 @@
     "60140" => "Hampshire, IL",
     "60141" => "Hines, IL",
     "60142" => "Huntley, IL",
-
+    */
     
 
     "60143" => "Itasca, IL",
