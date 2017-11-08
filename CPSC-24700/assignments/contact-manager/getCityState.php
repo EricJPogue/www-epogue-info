@@ -42,14 +42,14 @@
     "60134" => "Geneva, IL",
     "60135" => "Genoa, IL",
     "60136" => "Gilberts, IL",
-        /*    
+           
     "60137" => "Glen Ellyn, IL",
-    "60138" => "Glen Ellyn, IL"
+    "60138" => "Glen Ellyn, IL",
     "60139" => "Glendale Heights, IL",
     "60140" => "Hampshire, IL",
     "60141" => "Hines, IL",
     "60142" => "Huntley, IL",
-    */
+    
     
 
     "60143" => "Itasca, IL",
