@@ -4,7 +4,7 @@
 //  city and state for that zip code, and prints it for the
 //  form
       
-  $cityState = array("81611" => "Aspen, Colorado",
+  $cityState = array(
     "60101" => "Addison, IL",
     "60102" => "Algonquin, IL",
     "60103" => "Bartlett, IL",
@@ -21,8 +21,6 @@
     "60115" => "Dekalb, IL",
     "60116" => "Carol Stream, IL",
     "60117" => "Bloomingdale, IL",
-
-
     "60118" => "Dundee, IL",
     "60119" => "Elburn, IL",
     "60120" => "Elgin, IL",
@@ -34,24 +32,18 @@
     "60128" => "Carol Stream, IL",
     "60129" => "Esmond, IL",
     "60130" => "Forest Park, IL",
-
-
     "60131" => "Franklin Park, IL",
     "60132" => "Carol Stream, IL",
     "60133" => "Hanover Park, IL",
     "60134" => "Geneva, IL",
     "60135" => "Genoa, IL",
     "60136" => "Gilberts, IL",
-           
     "60137" => "Glen Ellyn, IL",
     "60138" => "Glen Ellyn, IL",
     "60139" => "Glendale Heights, IL",
     "60140" => "Hampshire, IL",
     "60141" => "Hines, IL",
     "60142" => "Huntley, IL",
-    
-    
-
     "60143" => "Itasca, IL",
     "60144" => "Kaneville, IL",
     "60145" => "Kingston, IL",
@@ -102,19 +94,8 @@
     "60195" => "Schaumburg, IL",
     "60196" => "Schaumburg, IL",
     "60197" => "Carol Stream, IL",
-    "60199" => "Carol Stream, IL",
-
-                     "81411" => "Bedrock, Colorado",
-                     "80908" => "Black Forest, Colorado",
-                     "80301" => "Boulder, Colorado",
-                     "81127" => "Chimney Rock, Colorado",
-                     "80901" => "Colorado Springs, Colorado",
-                     "81223" => "Cotopaxi, Colorado",
-                     "80201" => "Denver, Colorado",                     
-                     "81657" => "Vail, Colorado",
-                     "80435" => "Keystone, Colorado",
-                     "80536" => "Virginia Dale, Colorado"
-                     );
+    "60199" => "Carol Stream, IL"
+  );
   $zip = $_GET["zip"];
   if (array_key_exists($zip, $cityState))
     print $cityState[$zip];
