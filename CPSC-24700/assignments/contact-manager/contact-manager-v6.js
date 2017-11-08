@@ -11,7 +11,7 @@ currentContactIndex = 0;
 currentContact = contacts[currentContactIndex];
 
 function viewCurrentContact() {
-    console.log('viewCurrentContact()');
+    console.log('V2... viewCurrentContact()');
     document.getElementById("name").value = currentContact.name;   
     document.getElementById("address").value = currentContact.address;
     document.getElementById("city").value = currentContact.city;   
@@ -53,14 +53,17 @@ function zipFocusFunction() {
 }
 function zipBlurFunction() {
     console.log('currentContact.zip:'+currentContact.zip);
-    getPlace(currentContact.zip);
+    getPlace();
 }
 
 function myFunction() {
     console.log('myFunction()');
 }
 
-function getPlace(zip) {
+function getPlace() {
+
+    var zip = document.getElementById("zip").value
+
     console.log("function getPlace(zip) { ... }");
     var xhr = new XMLHttpRequest();
 
