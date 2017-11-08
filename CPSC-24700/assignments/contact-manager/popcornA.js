@@ -21,6 +21,7 @@ function getPlace(zip) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var result = xhr.responseText;
+      console.log("result:"+result);
       var place = result.split(', ');
       if (document.getElementById("city").value == "")
         document.getElementById("city").value = place[0];
