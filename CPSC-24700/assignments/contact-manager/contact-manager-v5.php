@@ -91,7 +91,7 @@ $cityStateIL601 = array(
     "60195" => "Schaumburg, IL",
     "60196" => "Schaumburg, IL",
     "60197" => "Carol Stream, IL",
-    "60199" => "Carol Stream, IL",
+    "60199" => "Carol Stream, IL"
 );
 
   $zip = $_GET["zip"];
