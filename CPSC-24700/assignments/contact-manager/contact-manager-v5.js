@@ -70,7 +70,7 @@ function myFunction() {
 }
 
 function getPlace(zip) {
-    console.log("function getPlace(zip) { ... }");
+    console.log("v2.... function getPlace(zip) { ... }");
     var xhr = new XMLHttpRequest();
 
 // Register the embedded handler function
@@ -84,7 +84,8 @@ function getPlace(zip) {
         document.getElementById("state").value = place[1];
     }
   }
-  xhr.open("GET", "contact-manager-v5.php?zip=" + zip);
+  //xhr.open("GET", "contact-manager-v5.php?zip=" + zip);
+  xhr.open("GET", "getCityState.php?zip=" + zip);
   xhr.send(null);
 }
 
