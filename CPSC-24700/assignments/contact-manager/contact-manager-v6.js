@@ -11,7 +11,7 @@ currentContactIndex = 0;
 currentContact = contacts[currentContactIndex];
 
 function viewCurrentContact() {
-    console.log('V2... viewCurrentContact()');
+    console.log('V3... viewCurrentContact()');
     document.getElementById("name").value = currentContact.name;   
     document.getElementById("address").value = currentContact.address;
     document.getElementById("city").value = currentContact.city;   
@@ -79,8 +79,8 @@ function getPlace() {
         document.getElementById("state").value = place[1];
     }
   }
-  //xhr.open("GET", "getCityState.php?zip=" + zip);
-    xhr.open("GET", "contact-manager-v5.php?zip=" + zip);
+  xhr.open("GET", "getCityState.php?zip=" + zip);
+    //xhr.open("GET", "contact-manager-v5.php?zip=" + zip);
   xhr.send(null);
 }
 
