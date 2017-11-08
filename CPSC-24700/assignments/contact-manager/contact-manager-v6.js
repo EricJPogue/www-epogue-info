@@ -52,7 +52,8 @@ function zipFocusFunction() {
     console.log('focusFunction()');
 }
 function zipBlurFunction() {
-
+    console.log('currentContact.zip:'+currentContact.zip);
+    getPlace(currentContact.zip);
 }
 
 function myFunction() {
@@ -60,6 +61,22 @@ function myFunction() {
 }
 
 function getPlace(zip) {
+    console.log("function getPlace(zip) { ... }");
+    var xhr = new XMLHttpRequest();
 
+// Register the embedded handler function
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var result = xhr.responseText;
+      console.log("result:"+result);
+      var place = result.split(', ');
+      if (document.getElementById("city").value == "")
+        document.getElementById("city").value = place[0];
+      if (document.getElementById("state").value == "")
+        document.getElementById("state").value = place[1];
+    }
+  }
+  xhr.open("GET", "getCityState.php?zip=" + zip);
+  xhr.send(null);
 }
 
