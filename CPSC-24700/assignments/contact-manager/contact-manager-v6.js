@@ -1,3 +1,4 @@
+// Global Variables
 
 // Starting array of contacts.
 var contacts = [
@@ -10,6 +11,7 @@ var contacts = [
 currentContactIndex = 0; 
 currentContact = contacts[currentContactIndex];
 
+// Functions
 function viewCurrentContact() {
     console.log('V3... viewCurrentContact()');
     document.getElementById("name").value = currentContact.name;   
@@ -42,46 +44,53 @@ function next() {
 
 function add() {
     console.log('add()');
+
+    // Todo: Implement add functionality by inserting new element into array.
 }
 
 function remove() {
     console.log('remove()');
+
+    // Todo: Implement delete functionality by deleting element from array.
 }
 
 function zipFocusFunction() {
     console.log('focusFunction()');
+
+    // Todo: Remove the function as it is not needed.
 }
+
 function zipBlurFunction() {
     getPlace();
 }
 
-function myFunction() {
-    console.log('myFunction()');
+function keyPressed() {
+    console.log('keyPressed()');
+
+    // This type of function should be useful in search as it implements keyPressed.
 }
 
 function getPlace() {
-
     var zip = document.getElementById("zip").value
     console.log("zip:"+zip);
 
     console.log("function getPlace(zip) { ... }");
     var xhr = new XMLHttpRequest();
 
-// Register the embedded handler function
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      var result = xhr.responseText;
-      console.log("result:"+result);
-      var place = result.split(', ');
-      if (document.getElementById("city").value == "")
-        document.getElementById("city").value = place[0];
-      if (document.getElementById("state").value == "")
-        document.getElementById("state").value = place[1];
+    // Register the embedded handler function
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var result = xhr.responseText;
+            console.log("result:"+result);
+            var place = result.split(', ');
+            if (document.getElementById("city").value == "")
+                document.getElementById("city").value = place[0];
+            if (document.getElementById("state").value == "")
+                document.getElementById("state").value = place[1];
+        }
     }
-  }
-  //xhr.open("GET", "getCityState.php?zip=" + zip);
     xhr.open("GET", "contact-manager-v6.php?zip=" + zip);
-  xhr.send(null);
+    xhr.send(null);
 }
 
 
