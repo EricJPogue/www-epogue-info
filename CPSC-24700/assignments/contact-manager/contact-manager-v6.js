@@ -63,6 +63,7 @@ function myFunction() {
 function getPlace() {
 
     var zip = document.getElementById("zip").value
+    console.log("zip:"+zip);
 
     console.log("function getPlace(zip) { ... }");
     var xhr = new XMLHttpRequest();
