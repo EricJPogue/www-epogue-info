@@ -95,7 +95,7 @@ $cityStateIL601 = array(
 );
 
   $zip = $_GET["zip"];
-  if (array_key_exists($zip, $$cityStateIL601))
+  if (array_key_exists($zip, $cityStateIL601))
     print $$cityStateIL601[$zip];
   else
     print " , ";
