@@ -80,8 +80,8 @@ function getPlace() {
         document.getElementById("state").value = place[1];
     }
   }
-  //xhr.open("GET", "getCityState.php?zip=" + zip);
-    xhr.open("GET", "contact-manager-v6.php?zip=" + zip);
+  xhr.open("GET", "getCityState.php?zip=" + zip);
+    //xhr.open("GET", "contact-manager-v6.php?zip=" + zip);
   xhr.send(null);
 }
 
