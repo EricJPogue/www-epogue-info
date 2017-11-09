@@ -94,10 +94,9 @@ $cityStateIL601 = array(
     "60199" => "Carol Stream, IL"
 );
 
-  $zip = $_GET["zip"];
-  if (array_key_exists($zip, $cityStateIL601))
+$zip = $_GET["zip"];
+if (array_key_exists($zip, $cityStateIL601))
     print $cityStateIL601[$zip];
-  else
+else
     print " , ";
-
 ?>
