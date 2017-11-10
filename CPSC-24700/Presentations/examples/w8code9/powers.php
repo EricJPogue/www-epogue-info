@@ -1,3 +1,4 @@
+********************************************************************************
 <!DOCTYPE html>
 <!-- powers.php
      An example to illustrate loops and arithmetic
@@ -15,13 +16,13 @@
     <table border = "border">
       <caption> Powers table </caption>
       <tr>
-	<th> Number </th>
-	<th> Square Root </th>
-	<th> Square </th>
-	<th> Cube </th>
-	<th> Quad </th>
+	    <th> Number </th>
+	    <th> Square Root </th>
+	    <th> Square </th>
+	    <th> Cube </th>
+	    <th> Quad </th>
       </tr>
-      <?php
+<?php
 	for ($number = 1; $number <=10; $number++) {
 	  $root = sqrt($number);
 	  $square = pow($number, 2);
@@ -31,7 +32,7 @@
 	  print("<td> $root </td> <td> $square </td>");
 	  print("<td> $cube </td> <td> $quad </td> </tr>");
 	}
-      ?>
+?>
     </table>
   </body>
 </html>
